@@ -16,13 +16,13 @@
     ],
     "require": {
         "laravel/framework": "^11.0",
-        "karlis/common-module": "^1.0",
-        "php": "^8.2"
+        "php": "^8.2",
+        "karlis/common-module": "^1.0"
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../common-module"
+            "type": "vcs",
+            "url": "https://github.com/Karlis-Juskovs/common-module"
         }
     ]
 }

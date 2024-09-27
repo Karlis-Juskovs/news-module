@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "99dd9a8672ca3bff2aebf0d217fcbcfd",
+    "content-hash": "34d8825273e959117fc4d2e370aaef5b",
     "packages": [
         {
             "name": "brick/math",
@@ -1053,10 +1053,16 @@
         {
             "name": "karlis/common-module",
             "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Karlis-Juskovs/common-module.git",
+                "reference": "05dcc56a7118e6ff0394111420c61dacafd9a308"
+            },
             "dist": {
-                "type": "path",
-                "url": "../common-module",
-                "reference": "3e84a643923d842ea7bfa665db21e0012c6cc842"
+                "type": "zip",
+                "url": "https://api.github.com/repos/Karlis-Juskovs/common-module/zipball/05dcc56a7118e6ff0394111420c61dacafd9a308",
+                "reference": "05dcc56a7118e6ff0394111420c61dacafd9a308",
+                "shasum": ""
             },
             "require": {
                 "nesbot/carbon": "^2.0",
@@ -1075,9 +1081,11 @@
                 }
             ],
             "description": "A common module with helper methods used by module1 and module2",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/Karlis-Juskovs/common-module/tree/1.0.0",
+                "issues": "https://github.com/Karlis-Juskovs/common-module/issues"
+            },
+            "time": "2024-09-27T12:11:12+00:00"
         },
         {
             "name": "laravel/framework",
