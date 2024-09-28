@@ -23,4 +23,9 @@ class News extends Model
     {
         return NewsFactory::new();
     }
+
+    public static function test()
+    {
+        echo "TEST string \n";
+    }
 }
