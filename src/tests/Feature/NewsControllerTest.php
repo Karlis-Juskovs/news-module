@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Karlis\Module1\Models\News;
 use Karlis\Module1\tests\TestControllerCase;
 
-class NewsTestController extends TestControllerCase
+class NewsControllerTest extends TestControllerCase
 {
     /**
      * Test checks if news.index route is working and returns expected content count.
