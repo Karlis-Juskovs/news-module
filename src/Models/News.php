@@ -2,15 +2,25 @@
 
 namespace Karlis\Module1\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
+use Karlis\Module1\database\factories\NewsFactory;
 
 class News extends Model
 {
-    use HasFactory;
 
     protected $fillable = [
         'title',
         'content'
     ];
+
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return Factory
+     */
+    protected static function newFactory(): NewsFactory
+    {
+        return NewsFactory::new();
+    }
 }
