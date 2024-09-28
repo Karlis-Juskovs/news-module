@@ -26,6 +26,6 @@ class News extends Model
 
     public static function test()
     {
-        echo "TEST string \n";
+        echo "TEST string v.3 \n";
     }
 }
