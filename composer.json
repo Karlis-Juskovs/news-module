@@ -1,6 +1,6 @@
 {
     "name": "karlis/module1",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "This will be more simplistic module to test more basic concepts",
     "type": "module",
     "autoload": {
