@@ -22,8 +22,10 @@ class NewsController extends Controller
         return News::create($request->all());
     }
 
-    public function show(News $news): JsonResponse
+    public function show(int $id): JsonResponse
     {
+        $news = News::find($id);
+
         $data = [
             'title' => $news->title,
             'content' => $news->content,
@@ -33,15 +35,23 @@ class NewsController extends Controller
         return response()->json($data);
     }
 
-    public function update(NewsRequest $request, News $news): News
+    public function update(NewsRequest $request, int $id): News
     {
-        $news->update($request->all());
+        $news = News::find($id);
+        if ($news) {
+            $news->update($request->all());
+        }
+
         return $news;
     }
 
-    public function destroy(News $news): JsonResponse
+    public function destroy(int $id): JsonResponse
     {
-        $news->delete();
+        $news = News::find($id);
+        if ($news) {
+            $news->delete();
+        }
+
         return response()->json(['deleted' => $news]);
     }
 }

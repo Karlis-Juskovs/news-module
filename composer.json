@@ -17,7 +17,7 @@
     "require": {
         "laravel/framework": "^11.0",
         "php": "^8.2",
-        "karlis/common-module": "^1.0"
+        "karlis/common-module": "dev-main"
     },
     "repositories": [
         {
