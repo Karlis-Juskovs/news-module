@@ -12,7 +12,7 @@ class NewsTestController extends TestControllerCase
     /**
      * Test checks if news.index route is working and returns expected content count.
      */
-    public function itCanListNewsItems():void
+    public function testItCanListNewsItems():void
     {
         News::newFactory()->count(3)->create();
 
@@ -28,7 +28,7 @@ class NewsTestController extends TestControllerCase
     /**
      * Test verifies if news.store route works.
      */
-    public function itCanStoreANewsItem(): void
+    public function testIfCanStoreANewsItem(): void
     {
         $data = [
             'title' => 'Some Mad Genius Put ChatGPT on a TI-84 Graphing Calculator',
@@ -44,7 +44,7 @@ class NewsTestController extends TestControllerCase
     /**
      * Test verifies if news.show route works and that common-module is connected (Helper class).
      */
-    public function itCanShowASingleNewsItem(): void
+    public function testIfCanShowASingleNewsItem(): void
     {
         $news = News::newFactory()->create();
 
@@ -61,7 +61,7 @@ class NewsTestController extends TestControllerCase
     /**
      * Test verifies that news.update route works.
      */
-    public function itCanUpdateANewsItem(): void
+    public function testIfCanUpdateANewsItem(): void
     {
         $news = News::newFactory()->create();
 
@@ -79,7 +79,7 @@ class NewsTestController extends TestControllerCase
     /**
      * Test verifies that news.destroy route works.
      */
-    public function itCanDeleteANewsItem(): void
+    public function testIfCanDeleteANewsItem(): void
     {
         $news = News::newFactory()->create();
 
