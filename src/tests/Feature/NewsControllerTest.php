@@ -10,7 +10,7 @@ use Karlis\Module1\tests\TestControllerCase;
 class NewsControllerTest extends TestControllerCase
 {
     /**
-     * Test checks if news.index route is working and returns expected content count.
+     * Test index route (GET /news).
      */
     public function testItCanListNewsItems():void
     {
@@ -26,9 +26,9 @@ class NewsControllerTest extends TestControllerCase
     }
 
     /**
-     * Test verifies if news.store route works.
+     * Test store route (POST /news).
      */
-    public function testIfCanStoreANewsItem(): void
+    public function testItCanStoreANewsItem(): void
     {
         $data = [
             'title' => 'Some Mad Genius Put ChatGPT on a TI-84 Graphing Calculator',
@@ -42,9 +42,9 @@ class NewsControllerTest extends TestControllerCase
     }
 
     /**
-     * Test verifies if news.show route works and that common-module is connected (Helper class).
+     * Test show route (GET /news/{id}) and that common-module is connected (Helper class).
      */
-    public function testIfCanShowASingleNewsItem(): void
+    public function testItCanShowASingleNewsItem(): void
     {
         $news = News::newFactory()->create();
 
@@ -59,9 +59,9 @@ class NewsControllerTest extends TestControllerCase
     }
 
     /**
-     * Test verifies that news.update route works.
+     * Test update route (PUT /news/{id}).
      */
-    public function testIfCanUpdateANewsItem(): void
+    public function testItCanUpdateANewsItem(): void
     {
         $news = News::newFactory()->create();
 
@@ -77,9 +77,9 @@ class NewsControllerTest extends TestControllerCase
     }
 
     /**
-     * Test verifies that news.destroy route works.
+     * Test destroy route (DELETE /news/{id}).
      */
-    public function testIfCanDeleteANewsItem(): void
+    public function testItCanDeleteANewsItem(): void
     {
         $news = News::newFactory()->create();
 
