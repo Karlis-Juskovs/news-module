@@ -19,7 +19,7 @@ class NewsController extends Controller
 
     public function store(NewsRequest $request): News
     {
-        return News::create($request->all());
+        return News::create($request->validated());
     }
 
     public function show(int $id): JsonResponse
@@ -39,7 +39,7 @@ class NewsController extends Controller
     {
         $news = News::find($id);
         if ($news) {
-            $news->update($request->all());
+            $news->update($request->validated());
         }
 
         return $news;
